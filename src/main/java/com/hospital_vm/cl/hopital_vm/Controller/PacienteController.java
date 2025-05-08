@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hospital_vm.cl.hopital_vm.Model.Paciente;
 import com.hospital_vm.cl.hopital_vm.Service.PacienteService;
 
-@RestController
+@RestController 
 @RequestMapping("/api/v1/pacientes")
 public class PacienteController {
 
