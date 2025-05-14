@@ -1,6 +1,6 @@
 package com.hospital_vm.cl.hopital_vm.Model;
 
-import jakarta.annotation.Generated;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

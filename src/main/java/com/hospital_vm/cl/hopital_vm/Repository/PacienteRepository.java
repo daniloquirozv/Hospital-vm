@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @Repository
-public interface PacienteRepository extends JpaRepository<Paciente, Long> {  
+public interface PacienteRepository extends JpaRepository<Paciente, Integer> {  
 
     //Usando JPQL
     @Query("SELECT p FROM Paciente p WHERE p.apellido= : apellido")

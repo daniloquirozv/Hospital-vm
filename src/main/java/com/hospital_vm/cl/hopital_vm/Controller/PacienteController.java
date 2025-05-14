@@ -33,13 +33,6 @@ public class PacienteController {
         return ResponseEntity.ok(pacientes); // Alternativa 2 return new ResponseEntity<>(pacientes, HttpStatus.OK);
     }
 
-    @PostMapping
-    public ResponseEntity<Paciente> guardar(@RequestBody Paciente paciente){
-        Paciente productoNuevo = pacienteService.save(paciente);
-        return ResponseEntity.status(HttpStatus.CREATED).body(productoNuevo); 
-        // ALternativa 2 return new ResponseEntity<>(productoNuevo, HttpStatus.ACCEPTED);
-    }
-
     @GetMapping("/{id}")
     public ResponseEntity<Paciente> buscar(@PathVariable Integer id){
         try {
@@ -49,6 +42,14 @@ public class PacienteController {
             return ResponseEntity.notFound().build();
         }
     }
+    
+    @PostMapping
+    public ResponseEntity<Paciente> guardar(@RequestBody Paciente paciente){
+        Paciente productoNuevo = pacienteService.save(paciente);
+        return ResponseEntity.status(HttpStatus.CREATED).body(productoNuevo); 
+        // ALternativa 2 return new ResponseEntity<>(productoNuevo, HttpStatus.ACCEPTED);
+    }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Paciente> actualizar(@PathVariable Integer id,@RequestBody Paciente paciente){
